@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;700&display=swap");
+.navbar {
+  background: linear-gradient(180deg, #4E4E4E 0%, rgba(78, 78, 78, 0) 96.15%);
+  height: 15vh;
+}
+.navbar .container .logo-brand {
+  font-family: "Courgette";
+  font-size: 2.75em;
+}
+.navbar .container .logo-brand img {
+  height: 4.5rem;
+}
+.navbar .container .navbar-collapse {
+  font-family: "Marvel", sans-serif;
+}
+.navbar .container .navbar-collapse ul li a {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+.navbar .container .navbar-collapse ul li a:hover {
+  text-shadow: 1px 1px 1px white;
+}
+
+.banner-image {
+  background-image: url(../img/banner-img.jpg);
+  background-size: cover;
+}
+.banner-image .search-sec {
+  background: rgba(14, 14, 14, 0.6);
+}
+.banner-image .search-sec form .row .input-wrapper {
+  position: relative;
+}
+.banner-image .search-sec form .row .input-wrapper input {
+  border-radius: 0.85rem;
+}
+.banner-image .search-sec form .row .input-wrapper input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+.banner-image .search-sec form .row .input-wrapper input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0.35;
+}
+.banner-image .search-sec form .row .input-wrapper i {
+  position: absolute;
+  display: block;
+  bottom: 0.6rem;
+  right: 1.65rem;
+  opacity: 0.35;
+  user-select: none;
+  cursor: pointer;
+}
+.banner-image .search-sec form .row .button-wrapper button {
+  width: 100%;
+  background-color: #1E336D;
+  color: white;
+  border-radius: 0.85rem;
+  font-family: "Marvel", sans-serif;
+  font-weight: bold;
+}
+.banner-image .search-sec form .row .button-wrapper button:hover {
+  background-color: #0f3396;
+}
+
+.section-first {
+  background-image: url(../img/playa.jfif);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px 175px 50px rgba(0, 0, 0, 0.35);
+}
+.section-first div h2 {
+  font-family: "Atma", cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 2.25em;
+}
+.section-first div p {
+  font-family: "Marvel", sans-serif;
+  font-size: 1.45em;
+  color: white;
+}
+.section-first div .list-destinations .card {
+  border-radius: 1.25rem;
+}
+.section-first div .list-destinations .card img {
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+.section-first div .list-destinations .card .card-body span {
+  font-family: "Marvel", sans-serif;
+  color: #6A6A6A;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  border-left: 1px solid #6A6A6A;
+  padding-left: 0.75rem;
+}
+.section-first div .list-destinations .card .card-body div {
+  margin: 0 0 0 0.75rem;
+}
+.section-first div .list-destinations .card .card-body div p {
+  color: #6A6A6A;
+  margin: 0;
+  text-align: start;
+  font-size: 1em;
+}
+.section-first div .list-destinations .card .card-body div p i {
+  font-family: "Courgette";
+}
+.section-first div .list-destinations .card .card-body div p:nth-child(2) {
+  font-family: "Courgette";
+  color: black;
+  font-size: 1.2em;
+}
+.section-first div .list-reasons .reason div {
+  background-color: #1E336D;
+  width: 15rem;
+  height: 15rem;
+  padding: 3.5rem;
+}
+.section-first div .list-reasons .reason div img {
+  width: 100%;
+  height: 100%;
+}
+.section-first div .list-reasons .reason div .rotate-45 {
+  transform: rotate(45deg);
+}
+.section-first div .list-reasons .reason p {
+  font-size: 2em;
+  line-height: 2rem;
+}
+.section-first .reasons-div {
+  box-shadow: 0px -50px 50px rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.service {
+  border-radius: 1.25rem;
+}
+.service img {
+  border-radius: 1.25rem 1.25rem 0 0;
+  width: 100%;
+}
+.service div {
+  font-family: "Marvel", sans-serif;
+  line-height: 1.25rem;
+}
+.service div p {
+  font-size: 2em;
+  font-weight: bolder;
+}
+.service div a {
+  color: #1E336D;
+  font-size: 1.5em;
+}
+
+footer {
+  background: #4c4c4c;
+}
+footer .foot-data .f-info-site a {
+  font-family: "Courgette";
+  font-size: 3em;
+  color: #fff;
+  text-decoration: none;
+}
+footer .foot-data .f-info-site a img {
+  height: 4.5rem;
+}
+footer .foot-data .f-info-site p {
+  font-family: "Marvel", sans-serif;
+  color: #fff;
+  font-size: 1.1em;
+}
+footer .foot-data .f-info-site div a {
+  font-size: 2.25em;
+  letter-spacing: 1rem;
+}
+footer .foot-data .f-menu h4 {
+  font-family: "Marvel", sans-serif;
+  color: #fff;
+  font-weight: bolder;
+}
+footer .foot-data .f-menu ul {
+  list-style: none;
+  padding: 0;
+}
+footer .foot-data .f-menu ul li a {
+  color: #fff;
+  font-style: italic;
+  font-weight: lighter;
+  text-decoration: none;
+  line-height: 1.85rem;
+}
+footer .foot-data .f-menu ul li a:hover {
+  text-decoration: underline;
+}
+footer .foot-data .f-contacto h4 {
+  font-family: "Marvel", sans-serif;
+  color: #fff;
+  font-weight: bolder;
+}
+footer .foot-data .f-contacto ul {
+  list-style: none;
+  padding: 0;
+}
+footer .foot-data .f-contacto ul li {
+  color: #fff;
+  font-style: italic;
+  font-weight: lighter;
+  text-decoration: none;
+  line-height: 2.25rem;
+}
+footer .foot-data .f-pays h4 {
+  font-family: "Marvel", sans-serif;
+  color: #fff;
+  font-weight: bolder;
+  text-align: end;
+}
+footer .foot-data .f-pays div i {
+  font-size: 2.25rem;
+  color: #fff;
+  font-style: italic;
+  font-weight: lighter;
+  text-decoration: none;
+  line-height: 2.25rem;
+}
+footer .copyright p {
+  font-family: "Marvel", sans-serif;
+  font-size: 1em;
+}
+
+#modalLogin .modal-content {
+  background: rgba(0, 0, 0, 0.6666666667);
+  font-family: "Marvel", sans-serif;
+}
+#modalLogin .modal-content .modal-body h3 {
+  font-weight: bolder;
+  font-size: 2.75em;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating input {
+  background: none;
+  color: #fff;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating select {
+  background: none;
+  color: #fff;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating select option {
+  color: black;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating label {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
