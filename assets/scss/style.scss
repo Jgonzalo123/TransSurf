@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;700&display=swap');
 
-.navbar {
-    background: linear-gradient(180deg, #4E4E4E 0%, rgba(78, 78, 78, 0) 96.15%);
-    height: 15vh;
-
-    .container {
+.navbar-account {
+    background: #3d3d3d;
+    .container-fluid {
         .logo-brand {
             font-family: 'Courgette';
             font-size: 2.75em;
             img {
-                height: 4.5rem;
+                height: 4.25rem;
             }
     
         }
@@ -24,6 +23,43 @@
                 &:hover {
                     text-shadow: 1px 1px 1px white;
                 }
+            }
+            .dropdown-menu {
+                font-size: 0.75em;
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
+
+.navbar-main {
+    background: linear-gradient(180deg, #4E4E4E 0%, rgba(78, 78, 78, 0) 96.15%);
+    height: 15vh;
+
+    .container-fluid {
+        .logo-brand {
+            font-family: 'Courgette';
+            font-size: 2.75em;
+            img {
+                height: 4.25rem;
+            }
+    
+        }
+        .navbar-collapse {
+            font-family: 'Marvel', sans-serif;
+            ul li a {
+                font-size: 1.75em;
+                font-weight: bold;
+
+                &:hover {
+                    text-shadow: 1px 1px 1px white;
+                }
+            }
+            .dropdown-menu {
+                font-size: 0.75em;
+                left: auto;
+                right: 0;
             }
         }
     }
@@ -40,7 +76,7 @@
                 .input-wrapper {
                     position: relative;
 
-                    input {
+                    input,select {
                         border-radius: 0.85rem;
 
                         &::-webkit-calendar-picker-indicator {
@@ -71,7 +107,7 @@
                         background-color: #1E336D;
                         color: white;
                         border-radius: 0.85rem;
-                        font-family: 'Marvel', sans-serif;
+                        font-family: 'Abel', sans-serif;
                         font-weight: bold;
                         
                         &:hover {
@@ -98,7 +134,7 @@
             font-size: 2.25em;
         }
         p {
-            font-family: 'Marvel', sans-serif;
+            font-family: 'Abel', sans-serif;
             font-size: 1.45em;
             color: white;
         }
@@ -110,7 +146,7 @@
                 }
                 .card-body {
                     span {
-                        font-family: 'Marvel', sans-serif;
+                        font-family: 'Abel', sans-serif;
                         color: #6A6A6A;
                         transform: rotate(180deg);
                         writing-mode: vertical-rl;
@@ -129,9 +165,8 @@
                                 font-family: 'Courgette';
                             }
                         }
-
                         p:nth-child(2) {
-                            font-family: 'Courgette';
+                            font-family: 'Abel', sans-serif;
                             color: black;
                             font-size: 1.2em;
                         }
@@ -144,9 +179,9 @@
             .reason {
                 div {
                     background-color: #1E336D;
-                    width: 15rem;
-                    height: 15rem;
-                    padding: 3.5rem;
+                    width: 11.5rem;
+                    height: 11.5rem;
+                    padding: 2.75rem;
                     img {
                         width: 100%;
                         height: 100%;
@@ -156,7 +191,7 @@
                     }
                 }
                 p {
-                    font-size: 2em;
+                    font-size: 1.85em;
                     line-height: 2rem;
                 }
             }
@@ -168,6 +203,36 @@
     }
 }
 
+.section-second {
+    div {
+        h2 {
+            font-family: 'Atma', cursive;
+            font-weight: bold;
+            color: black;
+            font-size: 2.25em;
+        }
+        .service {
+            border-radius: 1.25rem;
+            img {
+                border-radius: 1.25rem 1.25rem 0 0;
+                width: 100%;
+            }
+            div {
+                font-family: 'Abel', sans-serif;
+                line-height: 1.25rem;
+                p {
+                    font-size: 1.5em;
+                    font-weight: 400;
+                }
+                a {
+                    color: #1E336D;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+
 .service {
     border-radius: 1.25rem;
     img {
@@ -175,11 +240,11 @@
         width: 100%;
     }
     div {
-        font-family: 'Marvel', sans-serif;
+        font-family: 'Abel', sans-serif;
         line-height: 1.25rem;
         p {
-            font-size: 2em;
-            font-weight: bolder;
+            font-size: 1.5em;
+            font-weight: 400;
         }
         a {
             color: #1E336D;
@@ -188,8 +253,52 @@
     }
 }
 
+.section-account {
+    font-family: 'Abel', sans-serif;
+    .row {
+        .col-opc-account {
+            .list-group-item.active {
+                background-color: #3d3d3d;
+                border-color: #3d3d3d;
+            }
+        }
+    }
+}
+
+.section-cities {
+    font-family: 'Abel', sans-serif;
+    .card .card-body {
+        .row .col {
+            h3 {
+                color: #0f3396;
+            }
+        }
+    }
+}
+
+#result-search {
+    font-family: 'Abel', sans-serif;
+}
+
+.list-seating {
+    font-family: 'Abel', sans-serif;
+    .card {
+        .row.card-body {
+            .card {
+                cursor: pointer;
+                i {
+                    font-size: 3vw; 
+                }
+            }
+            .card.bg-danger {
+                cursor: auto;
+            }
+        }
+    }
+}
+
 footer {
-    background: #4c4c4c;
+    background: #3d3d3d;
 
     .foot-data {
 
@@ -260,7 +369,6 @@ footer {
                 font-family: 'Marvel', sans-serif;
                 color: #fff;
                 font-weight: bolder;
-                text-align: end;
             }
             div {
                 i {
@@ -285,7 +393,7 @@ footer {
 #modalLogin {
     .modal-content {
         background: #000000aa;
-        font-family: 'Marvel', sans-serif;
+        font-family: 'Abel', sans-serif;
         .modal-body {
             h3 {
                 font-weight: bolder;

@@ -23,18 +23,17 @@
 
 <body>
     <!-- NavBar -->
-    <nav class="navbar fixed-top position-absolute navbar-expand-lg navbar-dark p-md-3">
-        <div class="container">
+    <nav class="navbar fixed-top position-absolute navbar-expand-lg navbar-dark p-md-3 navbar-main">
+        <div class="container-fluid">
             <a href="./index.html" class="navbar-brand logo-brand">
-                <img src="./assets/img/logo.png" alt="logo">
-                <span class="align-middle">TransSurf</span>
+                <img src="./assets/img/logo.png" class="img-fluid" alt="logo">
+                <span class="align-middle d-none d-sm-inline">TransSurf</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="mx-auto"></div>
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav text-end">
                     <li class="nav-item">
                         <a href="./pages/destinos.html" class="nav-link text-white">Destinos</a>
                     </li>
@@ -49,9 +48,9 @@
                     </li>
                     <li class="nav-item dropdown nav-item-cuenta d-none">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mi Cuenta</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./pages/perfil.html">Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Salir</a></li>
+                        <ul class="dropdown-menu position-absolute">
+                            <li><a class="dropdown-item" href="./pages/cuenta.html">Perfil</a></li>
+                            <li><a class="dropdown-item" id="btnLogout">Salir</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -62,38 +61,40 @@
     <!-- Banner Imagen -->
     <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-end">
         <div class="search-sec text-center py-5 w-100">
-            <form action="" class="container">
-                <div class="row">
-                    <div class="col input-wrapper">
-                        <input class="form-control" list="listOrigen" id="inputOrigen" placeholder="Ciudad de Origen">
-                        <datalist id="listOrigen">
-                            <option value="Lima">
-                            <option value="Asia">
-                            <option value="Ica">
-                            <option value="Lunahuana">
-                            <option value="Chilca">
-                        </datalist>
-                        <i class="fa-light fa-location-dot"></i>
+            <form id="fBusqueda" class="container">
+                <div class="row g-2">
+                    <div class="col-6 col-lg input-wrapper">
+                        <div class="form-floating">
+                            <select class="form-control" id="sOrigen">
+                                <option selected disabled>Seleccione Ciudad</option>
+                            </select>
+                            <i class="fa-light fa-location-dot"></i>
+                            <label for="sOrigen">Ciudad Origen</label>
+                        </div>
                     </div>
-                    <div class="col input-wrapper">
-                        <input class="form-control" list="listDestino" id="inputDestino" placeholder="Ciudad de Destino">
-                        <datalist id="listDestino">
-                            <option value="Lima">
-                            <option value="Asia">
-                            <option value="Ica">
-                            <option value="Lunahuana">
-                            <option value="Chilca">
-                        </datalist>
-                        <i class="fa-light fa-location-dot"></i>
+                    <div class="col-6 col-lg input-wrapper">
+                        <div class="form-floating">
+                            <select class="form-control" id="sDestino">
+                                <option selected disabled>Seleccione Ciudad</option>
+                            </select>
+                            <i class="fa-light fa-location-dot"></i>
+                            <label for="sDestino">Ciudad Destino</label>
+                        </div>
                     </div>
-                    <div class="col input-wrapper">
-                        <input class="form-control" id="f_inicio" type="text" onfocus="setDateInput(this, true)" placeholder="Fecha de Ida">
+                    <div class="col-6 col-lg input-wrapper">
+                        <div class="form-floating">
+                            <input class="form-control" id="f_inicio" type="date" placeholder="Fecha de Ida">
+                            <label for="f_inicio">Fecha de Ida</label>
+                        </div>
                     </div>
-                    <div class="col input-wrapper">
-                        <input class="form-control" id="f_fin" type="text" onfocus="setDateInput(this, false)" placeholder="Fecha de Ida (opcional)">
+                    <div class="col-6 col-lg input-wrapper">
+                        <div class="form-floating">
+                            <input class="form-control" id="f_fin" type="date" placeholder="Fecha de Vuelta (opcional)">
+                            <label for="f_fin">Fecha de Vuelta</label>
+                        </div>
                     </div>
-                    <div class="col button-wrapper">
-                        <button class="btn">Buscar</button>
+                    <div class="col col-lg button-wrapper">
+                        <button class="btn h-100">Buscar</button>
                     </div>
                 </div>
             </form>
@@ -105,7 +106,7 @@
             <div class="p-5 text-center destinations-div">
                 <h2 class="">Nuestros Destinos</h2>
                 <p>¿A donde quiere viajar hoy?</p>
-                <div class="list-destinations container px-5 owl-carousel owl-theme my-5">
+                <div class="list-destinations container-fluid px-5 owl-carousel owl-theme my-5">
                     <div class="card border-0">
                         <img src="./assets/img/lima.jpeg" class="card-img-top" alt="destino">
                         <div class="card-body d-flex">
@@ -113,7 +114,7 @@
                             <div class="text-black">
                                 <p>VIAJA A</p>
                                 <p>Lima</p>
-                                <p>
+                                <p class="icons-stars">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -213,25 +214,25 @@
             <div class="p-5 text-center reasons-div">
                 <h2 class="">¿Por que escogernos?</h2>
                 <div class="list-reasons container row mt-5 mx-auto">
-                    <div class="reason col-3">
+                    <div class="reason col col-sm-6 col-xl-3">
                         <div class="rounded-circle mx-auto">
                             <img src="./assets/img/oncoming-bus.svg" alt="">
                         </div>
                         <p>Flota <br/>moderna</p>
                     </div>
-                    <div class="reason col-3">
+                    <div class="reason col col-sm-6 col-xl-3">
                         <div class="rounded-circle mx-auto">
                             <img class="rotate-45" src="./assets/img/gps.svg" alt="">
                         </div>
                         <p>Control <br/>GPS</p>
                     </div>
-                    <div class="reason col-3">
+                    <div class="reason col col-sm-6 col-xl-3">
                         <div class="rounded-circle mx-auto">
                             <img src="./assets/img/mask-covid19.svg" alt="">
                         </div>
                         <p>Medidas <br/>Preventivas</p>
                     </div>
-                    <div class="reason col-3">
+                    <div class="reason col col-sm-6 col-xl-3">
                         <div class="rounded-circle mx-auto">
                             <img src="./assets/img/seat.svg" alt="">
                         </div>
@@ -244,7 +245,7 @@
             <div class="p-5">
                 <h2 class="text-center">Nuestros Servicios</h2>
                 <div class="list-services container row mt-5 mx-auto gap-5">
-                    <div class="service card col p-0">
+                    <div class="service card col-md p-0">
                         <img src="./assets/img/servicio1.jpg" class="card-img-top" alt="servicio">
                         <div class="card-body text-center">
                             <p class="card-text">Transporte Personal</p>
@@ -256,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service card col p-0">
+                    <div class="service card col-md p-0">
                         <img src="./assets/img/servicio2.jpg" class="card-img-top" alt="servicio">
                         <div class="card-body text-center">
                             <p class="card-text">Transporte de Carga</p>
@@ -268,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service card col p-0">
+                    <div class="service card col-md p-0">
                         <img src="./assets/img/servicio3.jpg" class="card-img-top" alt="servicio">
                         <div class="card-body text-center">
                             <p class="card-text">Transporte Turistico</p>
@@ -286,13 +287,13 @@
     </main>
 
     <footer class="py-4 px-5">
-        <div class="foot-data row container mx-auto">
-            <div class="col-5 f-info-site">
+        <div class="foot-data row g-2 container mx-auto">
+            <div class="col-md-8 col-lg-6 col-xl-5 f-info-site text-center text-md-start">
                 <a href="./index.html">
                     <img src="./assets/img/logoalterno.png" alt="logo">
                     <span class="align-middle">TransSurf</span>
                 </a>
-                <p class="my-3 w-75">
+                <p class="my-3 me-0 me-md-5">
                     Satisfacemos los requerimientos de servicio de transporte del mercado, ofreciendo y garantizando la satisfaccion total de nuestros clientes
                 </p>
                 <div class="d-inline-block">
@@ -301,7 +302,7 @@
                     <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="col-2 f-menu">
+            <div class="col-md-4 col-lg-3 col-xl-2 f-menu text-center text-md-start">
                 <h4>Menú</h4>
                 <ul>
                     <li><a href="./index.html">Inicio</a></li>
@@ -311,7 +312,7 @@
                     <li><a href="#">Iniciar Sesión</a></li>
                 </ul>
             </div>
-            <div class="col-3 f-contacto">
+            <div class="col-md-8 col-lg-3 col-xl-3 f-contacto text-center text-md-start">
                 <h4>Contáctanos</h4>
                 <ul>
                     <li><i class="fa-light fa-phone"></i> (01) 123 4567</li>
@@ -319,18 +320,18 @@
                     <li><i class="fa-thin fa-location-dot"></i> Av. Nicolás Arriola 780 - La Victoria</li>
                 </ul>
             </div>
-            <div class="col-2 f-pays">
-                <h4>Medios de Pago</h4>
-                <div class="text-end">
+            <div class="col-md-4 col-lg-3 col-xl-2 f-pays text-center text-md-start">
+                <h4 class="text-xl-end">Medios de Pago</h4>
+                <div class="text-xl-end">
                     <i class="fa-brands fa-cc-visa"></i>
                     <i class="fa-brands fa-cc-mastercard"></i>
                     <i class="fa-brands fa-cc-paypal"></i>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="mt-3 container">
             <div class="copyright text-white row justify-content-end">
-                <p class="col-8 border-top text-end">© Copyright 2021 Movil Group</p>
+                <p class="col col-lg-7 border-top text-center text-lg-end">© Copyright 2021 Movil Group</p>
             </div>
         </div>
     </footer>
@@ -427,7 +428,8 @@
     <!-- Alertify -->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <!-- Scrips -->
-    <script src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/auth.js"></script>
 </body>
 
 </html>

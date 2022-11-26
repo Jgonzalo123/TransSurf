@@ -1,26 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;700&display=swap");
-.navbar {
-  background: linear-gradient(180deg, #4E4E4E 0%, rgba(78, 78, 78, 0) 96.15%);
-  height: 15vh;
+.navbar-account {
+  background: #3d3d3d;
 }
-.navbar .container .logo-brand {
+.navbar-account .container-fluid .logo-brand {
   font-family: "Courgette";
   font-size: 2.75em;
 }
-.navbar .container .logo-brand img {
-  height: 4.5rem;
+.navbar-account .container-fluid .logo-brand img {
+  height: 4.25rem;
 }
-.navbar .container .navbar-collapse {
+.navbar-account .container-fluid .navbar-collapse {
   font-family: "Marvel", sans-serif;
 }
-.navbar .container .navbar-collapse ul li a {
+.navbar-account .container-fluid .navbar-collapse ul li a {
   font-size: 1.75em;
   font-weight: bold;
 }
-.navbar .container .navbar-collapse ul li a:hover {
+.navbar-account .container-fluid .navbar-collapse ul li a:hover {
   text-shadow: 1px 1px 1px white;
+}
+.navbar-account .container-fluid .navbar-collapse .dropdown-menu {
+  font-size: 0.75em;
+  left: auto;
+  right: 0;
+}
+
+.navbar-main {
+  background: linear-gradient(180deg, #4E4E4E 0%, rgba(78, 78, 78, 0) 96.15%);
+  height: 15vh;
+}
+.navbar-main .container-fluid .logo-brand {
+  font-family: "Courgette";
+  font-size: 2.75em;
+}
+.navbar-main .container-fluid .logo-brand img {
+  height: 4.25rem;
+}
+.navbar-main .container-fluid .navbar-collapse {
+  font-family: "Marvel", sans-serif;
+}
+.navbar-main .container-fluid .navbar-collapse ul li a {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+.navbar-main .container-fluid .navbar-collapse ul li a:hover {
+  text-shadow: 1px 1px 1px white;
+}
+.navbar-main .container-fluid .navbar-collapse .dropdown-menu {
+  font-size: 0.75em;
+  left: auto;
+  right: 0;
 }
 
 .banner-image {
@@ -33,10 +65,10 @@
 .banner-image .search-sec form .row .input-wrapper {
   position: relative;
 }
-.banner-image .search-sec form .row .input-wrapper input {
+.banner-image .search-sec form .row .input-wrapper input, .banner-image .search-sec form .row .input-wrapper select {
   border-radius: 0.85rem;
 }
-.banner-image .search-sec form .row .input-wrapper input::-webkit-calendar-picker-indicator {
+.banner-image .search-sec form .row .input-wrapper input::-webkit-calendar-picker-indicator, .banner-image .search-sec form .row .input-wrapper select::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 .banner-image .search-sec form .row .input-wrapper input[type=date]::-webkit-calendar-picker-indicator {
@@ -56,7 +88,7 @@
   background-color: #1E336D;
   color: white;
   border-radius: 0.85rem;
-  font-family: "Marvel", sans-serif;
+  font-family: "Abel", sans-serif;
   font-weight: bold;
 }
 .banner-image .search-sec form .row .button-wrapper button:hover {
@@ -76,7 +108,7 @@
   font-size: 2.25em;
 }
 .section-first div p {
-  font-family: "Marvel", sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 1.45em;
   color: white;
 }
@@ -87,7 +119,7 @@
   border-radius: 1.25rem 1.25rem 0 0;
 }
 .section-first div .list-destinations .card .card-body span {
-  font-family: "Marvel", sans-serif;
+  font-family: "Abel", sans-serif;
   color: #6A6A6A;
   transform: rotate(180deg);
   writing-mode: vertical-rl;
@@ -107,15 +139,15 @@
   font-family: "Courgette";
 }
 .section-first div .list-destinations .card .card-body div p:nth-child(2) {
-  font-family: "Courgette";
+  font-family: "Abel", sans-serif;
   color: black;
   font-size: 1.2em;
 }
 .section-first div .list-reasons .reason div {
   background-color: #1E336D;
-  width: 15rem;
-  height: 15rem;
-  padding: 3.5rem;
+  width: 11.5rem;
+  height: 11.5rem;
+  padding: 2.75rem;
 }
 .section-first div .list-reasons .reason div img {
   width: 100%;
@@ -125,12 +157,38 @@
   transform: rotate(45deg);
 }
 .section-first div .list-reasons .reason p {
-  font-size: 2em;
+  font-size: 1.85em;
   line-height: 2rem;
 }
 .section-first .reasons-div {
   box-shadow: 0px -50px 50px rgba(0, 0, 0, 0.75);
   background: rgba(0, 0, 0, 0.75);
+}
+
+.section-second div h2 {
+  font-family: "Atma", cursive;
+  font-weight: bold;
+  color: black;
+  font-size: 2.25em;
+}
+.section-second div .service {
+  border-radius: 1.25rem;
+}
+.section-second div .service img {
+  border-radius: 1.25rem 1.25rem 0 0;
+  width: 100%;
+}
+.section-second div .service div {
+  font-family: "Abel", sans-serif;
+  line-height: 1.25rem;
+}
+.section-second div .service div p {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.section-second div .service div a {
+  color: #1E336D;
+  font-size: 1.5em;
 }
 
 .service {
@@ -141,20 +199,52 @@
   width: 100%;
 }
 .service div {
-  font-family: "Marvel", sans-serif;
+  font-family: "Abel", sans-serif;
   line-height: 1.25rem;
 }
 .service div p {
-  font-size: 2em;
-  font-weight: bolder;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 .service div a {
   color: #1E336D;
   font-size: 1.5em;
 }
 
+.section-account {
+  font-family: "Abel", sans-serif;
+}
+.section-account .row .col-opc-account .list-group-item.active {
+  background-color: #3d3d3d;
+  border-color: #3d3d3d;
+}
+
+.section-cities {
+  font-family: "Abel", sans-serif;
+}
+.section-cities .card .card-body .row .col h3 {
+  color: #0f3396;
+}
+
+#result-search {
+  font-family: "Abel", sans-serif;
+}
+
+.list-seating {
+  font-family: "Abel", sans-serif;
+}
+.list-seating .card .row.card-body .card {
+  cursor: pointer;
+}
+.list-seating .card .row.card-body .card i {
+  font-size: 3vw;
+}
+.list-seating .card .row.card-body .card.bg-danger {
+  cursor: auto;
+}
+
 footer {
-  background: #4c4c4c;
+  background: #3d3d3d;
 }
 footer .foot-data .f-info-site a {
   font-family: "Courgette";
@@ -213,7 +303,6 @@ footer .foot-data .f-pays h4 {
   font-family: "Marvel", sans-serif;
   color: #fff;
   font-weight: bolder;
-  text-align: end;
 }
 footer .foot-data .f-pays div i {
   font-size: 2.25rem;
@@ -230,7 +319,7 @@ footer .copyright p {
 
 #modalLogin .modal-content {
   background: rgba(0, 0, 0, 0.6666666667);
-  font-family: "Marvel", sans-serif;
+  font-family: "Abel", sans-serif;
 }
 #modalLogin .modal-content .modal-body h3 {
   font-weight: bolder;
