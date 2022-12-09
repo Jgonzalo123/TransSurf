@@ -111,3 +111,5 @@ document.querySelector('#btnLogout').addEventListener('click',() => {
     localStorage.clear();
     location.reload();
 });
+
+$(".download").on("click", () => console.log("Hola"));

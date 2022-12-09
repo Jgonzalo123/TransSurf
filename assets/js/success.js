@@ -1,4 +1,6 @@
-document.querySelector("#dComprobantes").innerHTML = generarComprobantes();
+import { getReservaByAsiento } from './reserva.js';
+
+generarComprobantes();
 
 function generarComprobantes() {
     const asientos = JSON.parse(localStorage.getItem('asientos')) || [];
@@ -6,9 +8,18 @@ function generarComprobantes() {
     let html = "";
     asientos.forEach((asiento) => {
         html += `
-            <div><a class="btn btn-success px-5 ">Asiento ${asiento.numAsiento}</a></div>
+            <div><a class="btn btn-success px-5 btnReserve" data-asiento="${asiento.idAsiento}">Asiento ${asiento.numAsiento}</a></div>
         `;
     });
     localStorage.removeItem("asientos");
-    return html;
+
+    document.querySelector("#dComprobantes").innerHTML = html;
+
+    document.querySelectorAll(".btnReserve").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const idReserva = e.target.dataset.asiento;
+
+            getReservaByAsiento(idReserva);
+        });
+    });
 }
